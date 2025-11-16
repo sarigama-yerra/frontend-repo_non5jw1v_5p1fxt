@@ -4,13 +4,23 @@ import Work from './components/Work'
 import Services from './components/Services'
 import Tech from './components/Tech'
 import CTA from './components/CTA'
+import ScrollProgress from './components/ScrollProgress'
+import NarrativeFlow from './components/NarrativeFlow'
+import ParallaxTimeline from './components/ParallaxTimeline'
+import DataWeave from './components/DataWeave'
+import SectionDivider from './components/SectionDivider'
 
 function App() {
   return (
     <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-50 via-white to-amber-50">
+      <ScrollProgress />
       <Navbar />
       <main>
         <Hero />
+        <SectionDivider />
+        <NarrativeFlow />
+        <ParallaxTimeline />
+        <DataWeave />
         <Work />
         <Services />
         <Tech />
