@@ -1,26 +1,39 @@
-import { useState } from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Work from './components/Work'
+import Services from './components/Services'
+import Tech from './components/Tech'
+import CTA from './components/CTA'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-50 via-white to-amber-50">
+      <Navbar />
+      <main>
+        <Hero />
+        <Work />
+        <Services />
+        <Tech />
+        <CTA />
+      </main>
+      <footer className="py-12">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="rounded-2xl border border-white/50 bg-white/70 backdrop-blur p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-indigo-500 via-violet-500 to-amber-400" />
+              <div>
+                <p className="font-semibold">Digital Boop.</p>
+                <p className="text-sm text-gray-600">Independent software engineer crafting human-centered technology.</p>
+              </div>
+            </div>
+            <div className="flex gap-6 text-sm text-gray-700">
+              <a href="#" className="hover:text-indigo-600">Privacy Policy</a>
+              <a href="#" className="hover:text-indigo-600">My Story</a>
+              <a href="#contact" className="hover:text-indigo-600">Get in Touch</a>
+            </div>
+          </div>
         </div>
-      </div>
+      </footer>
     </div>
   )
 }
